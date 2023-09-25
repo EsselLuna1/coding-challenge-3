@@ -4,9 +4,10 @@
 general
 -----------------*/
 body, html {
-  background-color: hsl(216, 12%, 8%);
-  color: hsl(0, 0%, 100%);
-  font-size: 15px;
+  background: hsl(240, 73%, 65%);
+  background: linear-gradient(0deg, hsl(240, 73%, 65%) 0%, hsl(273, 75%, 66%) 100%) no-repeat center center fixed;
+  color: hsl(238, 29%, 16%);
+  font-size: 12px;
   font-family: 'Kumbh Sans', sans-serif;
 }
 * {
@@ -21,8 +22,8 @@ body, html {
   display: flex;
   max-width: 1440px;
   width: 100%;
-  /* height: 95vh; */
-  margin: 21px auto 0;
+  height: 94vh;
+  margin: 0 auto;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -50,12 +51,23 @@ body, html {
 /*----------------
 common
 -----------------*/
+.faq {
+  position: relative;
+  max-width: 925px;
+  height: 509px;
+  display: flex;
+  border-radius: 24px;
+  justify-content: flex-end;
+  background: url('../images/bg-pattern-desktop.svg') bottom -10rem left -36rem no-repeat;
+  background-color: #ffffff;
+}
 .attribution { 
   font-size: 11px; 
   text-align: center; 
+  color: #ffffff;
 }
 .attribution a { 
-  color: hsl(228, 45%, 44%); 
+  color: #ffffff;; 
 }
 @media screen and (max-width: 768px) {
   .title {
@@ -65,4 +77,35 @@ common
   .text01 {
     font-size: 14px;
   }
+}
+/*----------------
+faq image
+-----------------*/
+.imgWrap {
+  overflow-x: hidden;
+}
+.imgWrap img {
+  display: block;
+  margin-top: 66.7px;
+  margin-left: -52.5px;
+}
+.image::after {
+  content: "";
+  background: url('../images/illustration-box-desktop.svg') no-repeat;
+  width: 140px;
+  height: 190px;
+  position: absolute;
+  top: 66%;
+  left: -1.6%;
+  transform: translate(-55%, -55%);
+}
+/*----------------
+faq accordion
+-----------------*/
+.accordion {
+
+}
+.title {
+  font-weight: 700;
+  font-size: 32px;
 }
