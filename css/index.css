@@ -13,6 +13,7 @@ body, html {
 * {
   margin: 0;
   padding: 0;
+  list-style: none;
   box-sizing: border-box;
 }
 .hidden {
@@ -52,14 +53,16 @@ body, html {
 common
 -----------------*/
 .faq {
-  position: relative;
-  max-width: 925px;
+  /* position: relative; */
+  max-width: 920px;
   height: 509px;
   display: flex;
-  border-radius: 24px;
-  justify-content: flex-end;
-  background: url('../images/bg-pattern-desktop.svg') bottom -10rem left -36rem no-repeat;
-  background-color: #ffffff;
+  justify-content: center;
+  /* align-items: center; */
+  position: relative;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 0 30px 80px -30px black;
 }
 .attribution { 
   font-size: 11px; 
@@ -79,17 +82,33 @@ common
   }
 }
 /*----------------
-faq image
+left content / img
 -----------------*/
-.imgWrap {
-  overflow-x: hidden;
+.leftContent {
+  background: url(../images/bg-pattern-desktop.svg) no-repeat;
+  background-position: 122% 70%;
+  /* background-repeat: no-repeat; */
+  background-size: 180%;
+  overflow: hidden;
+  width: 50%;
 }
+.imageBox {
+  position: absolute;
+  left: -10%;
+  top: 40%;
+  z-index: 100;
+  width: 20.78%;
+}
+/* .imgWrap {
+  overflow-x: hidden;
+} */
 .imgWrap img {
   display: block;
-  margin-top: 66.7px;
-  margin-left: -52.5px;
+  margin-top: 73.7px;
+  margin-left: -84.5px;
+  width: 100%;
 }
-.image::after {
+/* .image::after {
   content: "";
   background: url('../images/illustration-box-desktop.svg') no-repeat;
   width: 140px;
@@ -98,12 +117,21 @@ faq image
   top: 66%;
   left: -1.6%;
   transform: translate(-55%, -55%);
-}
+} */
 /*----------------
 faq accordion
 -----------------*/
-.accordion {
-
+.rightContent {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  /* padding: 10px 65px 55px 30px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.rightWrap {
+  padding: 0px 111px 0px 30px;
 }
 .title {
   font-weight: 700;
