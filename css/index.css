@@ -54,52 +54,52 @@ body, html {
 common
 -----------------*/
 .faq {
-  height: 510px;
+  display: flex;
+  position: relative;
   max-width: 920px;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  background-color: #fff;
+  height: 510px;
   border-radius: 25px;
+  background-color: #fff;
+  justify-content: center;
   box-shadow: 0 30px 80px -30px #000;
 }
 .attribution { 
+  color: #ffffff; 
   font-size: 11px; 
-  text-align: center; 
-  color: #ffffff;
+  text-align: center;
 }
 .attribution a { 
   color: #ffffff;; 
 }
 @media screen and (max-width: 768px) {
   .faq {
-    flex-direction: column;
     max-width: 100%;
     width: 100%;
     padding: 80px 23px 41px;
+    flex-direction: column;
     justify-content: normal;
   }
   .faq::before {
-    content: "";
-    background: url(../images/illustration-woman-online-mobile.svg) no-repeat;
-    width: 238px;
-    height: 180px;
     position: absolute;
     top: -3%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    margin: auto;
     z-index: 1;
+    width: 238px;
+    height: 180px;
+    margin: auto;
+    background: url(../images/illustration-woman-online-mobile.svg) no-repeat;
+    content: "";
+    transform: translate(-50%, -50%);
   }
   .faq::after {
-    content: "";
-    background: url(../images/bg-pattern-mobile.svg) no-repeat;
-    width: 240px;
-    height: 180px;
     position: absolute;
     top: 13%;
     left: 50%;
+    width: 240px;
+    height: 180px;
+    background: url(../images/bg-pattern-mobile.svg) no-repeat;
+    content: "";
     transform: translate(-51%, -40%);
   }
 }
@@ -107,16 +107,16 @@ common
 left content / img
 -----------------*/
 .leftContent {
+  width: 50%;
+  overflow: hidden;
   background: url(../images/bg-pattern-desktop.svg) no-repeat;
   background-position: 116% 66%;
   background-size: 180%;
-  overflow: hidden;
-  width: 50%;
 }
 .imageBox {
   position: absolute;
-  left: -10%;
   top: 40%;
+  left: -10%;
   z-index: 100;
   width: 20.78%;
 }
@@ -129,17 +129,17 @@ left content / img
 faq accordion
 -----------------*/
 .accordion {
-  width: 50%;
   display: flex;
+  width: 50%;
   margin: 64px 3px 30px 32px;
 }
 .accordionWrap {
   width: 350px;
 }
 .title {
-  font-weight: 700;
-  font-size: 32px;
   padding-bottom: 20px;
+  font-size: 32px;
+  font-weight: 700;
 }
 .accordionItem {
   padding: 10px 0;
@@ -147,19 +147,19 @@ faq accordion
 }
 .accordionQuestion {
   display: flex;
+  cursor: pointer;
   justify-content: space-between;
   align-items: center;
-  cursor: pointer;
 }
 .accordionTitle {
-  position: relative;
   display: flex;
-  align-items: center;
-  font-weight: 400;
-  font-size: 14px;
+  position: relative;
   color: #000;
+  font-size: 14px;
+  font-weight: 400;
   line-height: 30px;
   cursor: pointer;
+  align-items: center;
 }
 .accordionTitle:hover {
   color: hsl(14, 88%, 65%);
@@ -175,14 +175,14 @@ faq accordion
   transform: rotate(180deg);
 }
 .accordionQuestion.is-open + .accordionPanel  {
-  transition: max-height 0.2s ease-out;
 	display: block;
+  transition: max-height 0.2s ease-out;
 }
 .arrow {
   display: block;
+  padding: 0 1.5rem;
   transform-origin: center;
   transition: 0.5s;
-  padding: 0 1.5rem;
 }
 .accordionPanel p {
   position: relative;
