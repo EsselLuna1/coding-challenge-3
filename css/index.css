@@ -39,7 +39,7 @@ body, html {
   .wrap .innerWrap {
     width: 100%;
     min-height: 100vh;
-    margin: 60px auto;
+    margin: 59px auto 0;
     padding: 0 24px;
     box-sizing: border-box;
   }
@@ -77,8 +77,8 @@ common
     flex-direction: column;
     max-width: 100%;
     width: 100%;
-    height: auto;
     padding: 80px 23px 41px;
+    justify-content: normal;
   }
   .faq::before {
     content: "";
@@ -191,7 +191,7 @@ faq accordion
 @media screen and (max-width: 768px) {
   .accordion {
     width: 100%;
-    margin: 50px 0;
+    margin: 50px 0 0;
   }
   .accordionWrap {
     width: 100%;
@@ -206,7 +206,8 @@ faq accordion
   .text01 {
     font-size: 14px;
   }
-  .arrow {
-    padding-right: 0;
+  .arrow,
+  .accordionQuestion.is-open .arrow {
+    padding: 0;
   }
 }
